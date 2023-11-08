@@ -1,0 +1,31 @@
+@font-face {
+  font-family: '조선견고딕';
+  src: url('../font/ChosunBg.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: '조선굵은고딕';
+  src: url('../font/ChosunKg.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: '공체Bold';
+  src: url('../font/esamanruBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: '공체Light';
+  src: url('../font/esamanruLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: '공체Medium';
+  src: url('../font/esamanruMedium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
