@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.f855e6bc.css",
-    "main.js": "./static/js/main.d1331619.js",
-    "static/js/453.ef5db0c4.chunk.js": "./static/js/453.ef5db0c4.chunk.js",
-    "service-worker.js": "./service-worker.js",
-    "static/media/logo.svg": "./static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
-    "index.html": "./index.html",
-    "main.f855e6bc.css.map": "./static/css/main.f855e6bc.css.map",
-    "main.d1331619.js.map": "./static/js/main.d1331619.js.map",
-    "453.ef5db0c4.chunk.js.map": "./static/js/453.ef5db0c4.chunk.js.map"
+    "main.css": "/PwaTest/static/css/main.f855e6bc.css",
+    "main.js": "/PwaTest/static/js/main.52d83485.js",
+    "static/js/453.ef5db0c4.chunk.js": "/PwaTest/static/js/453.ef5db0c4.chunk.js",
+    "service-worker.js": "/PwaTest/service-worker.js",
+    "static/media/logo.svg": "/PwaTest/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
+    "index.html": "/PwaTest/index.html",
+    "main.f855e6bc.css.map": "/PwaTest/static/css/main.f855e6bc.css.map",
+    "main.52d83485.js.map": "/PwaTest/static/js/main.52d83485.js.map",
+    "453.ef5db0c4.chunk.js.map": "/PwaTest/static/js/453.ef5db0c4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.d1331619.js"
+    "static/js/main.52d83485.js"
   ]
 }
