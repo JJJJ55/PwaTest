@@ -4,6 +4,8 @@ import "./App.css";
 import CameraComponent from "./CameraComponent";
 import CameraApp from "./CameraApp";
 import OcrTest from "./OcrTest";
+import TeachableMachinePose from "./TeachableMachinePose";
+import Model from "./Model";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       {/* <CameraComponent /> */}
       <CameraApp />
       <OcrTest />
+      {/* <TeachableMachinePose /> */}
+      <Model />
     </div>
   );
 }
