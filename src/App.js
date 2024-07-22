@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import CameraComponent from "./CameraComponent";
 import CameraApp from "./CameraApp";
+import OcrTest from "./OcrTest";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       pwa 및 카메라 권한 테스트입니다
       {/* <CameraComponent /> */}
       <CameraApp />
+      <OcrTest />
     </div>
   );
 }
