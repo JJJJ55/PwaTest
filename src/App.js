@@ -14,8 +14,8 @@ function App() {
       {/* <CameraComponent /> */}
       <CameraApp />
       <OcrTest />
-      {/* <TeachableMachinePose /> */}
-      <Model />
+      <TeachableMachinePose />
+      {/* <Model /> */}
     </div>
   );
 }
