@@ -34,7 +34,7 @@ export async function requestPermission() {
   console.log("알림 권한이 허용됨");
 
   const token = await getToken(messaging, {
-    vapidKey: process.env.REACT_APP_VAPID_KEY,
+    vapidKey: process.env.REACT_APP_FCM_VAPID,
   });
 
   if (token) console.log("token: ", token);
