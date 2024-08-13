@@ -6,15 +6,17 @@ import CameraApp from "./CameraApp";
 import OcrTest from "./OcrTest";
 import TeachableMachinePose from "./TeachableMachinePose";
 import Model from "./Model";
+import { requestPermission } from "./firebaseCloudMessaging";
 
 function App() {
+  requestPermission();
   return (
     <div className="App">
-      pwa 및 카메라 권한 테스트입니다
+      pwa 푸쉬알림 테스트
       {/* <CameraComponent /> */}
       <CameraApp />
-      <OcrTest />
-      <TeachableMachinePose />
+      {/* <OcrTest /> */}
+      {/* <TeachableMachinePose /> */}
       {/* <Model /> */}
     </div>
   );
