@@ -1,4 +1,3 @@
-import Tesseract from "tesseract.js";
 import { useState } from "react";
 
 const OcrTest = () => {
@@ -10,21 +9,6 @@ const OcrTest = () => {
     const tempImagePath = URL.createObjectURL(event.target.files[0]);
 
     setImagePath(tempImagePath);
-
-    Tesseract.recognize(tempImagePath, "eng+kor", {
-      logger: (m) => {
-        setLog({
-          status: m.status,
-          progress: Math.floor(m.progress.toFixed(2) * 100),
-        });
-      },
-    })
-      .catch((err) => {
-        console.error(err);
-      })
-      .then(({ data: { text } }) => {
-        setResult(text);
-      });
   };
 
   return (
