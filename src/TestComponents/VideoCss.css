@@ -1,0 +1,4 @@
+/* styles.css */
+.my-player .react-player__control {
+  pointer-events: none; /* 사용자 클릭을 막습니다 */
+}

@@ -5,6 +5,7 @@ import CameraComponent from "./TestComponents/CameraComponent";
 import CameraApp from "./TestComponents/CameraApp";
 import { requestPermission } from "./firebaseCloudMessaging";
 import ImageMeta from "./TestComponents/ImageMeta";
+import Video from "./TestComponents/Video";
 
 function App() {
   requestPermission();
@@ -14,6 +15,7 @@ function App() {
       {/* <CameraComponent /> */}
       {/* <CameraApp /> */}
       <ImageMeta />
+      <Video />
     </div>
   );
 }
