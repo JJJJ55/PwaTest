@@ -1,85 +1,105 @@
-// import React, { useEffect, useRef } from "react";
-// import * as tmPose from "@teachablemachine/pose"; // Import Teachable Machine Pose library
+import React, { useEffect, useRef } from "react";
+import * as tf from "@tensorflow/tfjs";
+import * as tmPose from "@teachablemachine/pose";
 
-// const TeachableMachinePose = () => {
-//   const URL = "./my_model/";
-//   let model, webcam, ctx, labelContainer, maxPredictions;
-//   const canvasRef = useRef(null);
+const TeachableMachinePose = () => {
+  const webcamRef = useRef(null);
+  const canvasRef = useRef(null);
+  const labelContainerRef = useRef(null);
+  let model, webcam, ctx, labelContainer, maxPredictions;
 
-//   useEffect(() => {
-//     const init = async () => {
-//       const modelURL = URL + "model.json";
-//       const metadataURL = URL + "metadata.json";
+  // Define init function
+  const init = async () => {
+    const modelURL = "/public/my_model/model.json";
+    const metadataURL = "/public/my_model/metadata.json";
 
-//       model = await tmPose.load(modelURL, metadataURL);
-//       maxPredictions = model.getTotalClasses();
+    // Load the model and metadata
+    model = await tmPose.load(modelURL, metadataURL);
+    maxPredictions = model.getTotalClasses();
 
-//       const size = 200;
-//       const flip = true;
-//       webcam = new tmPose.Webcam(size, size, flip);
-//       await webcam.setup();
-//       await webcam.play();
-//       window.requestAnimationFrame(loop);
+    // Setup webcam
+    const size = 200;
+    const flip = true;
+    webcam = new tmPose.Webcam(size, size, flip);
+    await webcam.setup();
+    await webcam.play();
 
-//       const canvas = canvasRef.current;
-//       canvas.width = size;
-//       canvas.height = size;
-//       ctx = canvas.getContext("2d");
-//       labelContainer = document.getElementById("label-container");
-//       for (let i = 0; i < maxPredictions; i++) {
-//         labelContainer.appendChild(document.createElement("div"));
-//       }
-//     };
+    // Initialize canvas and label container
+    const canvas = canvasRef.current;
+    canvas.width = size;
+    canvas.height = size;
+    ctx = canvas.getContext("2d");
+    labelContainer = labelContainerRef.current;
+    for (let i = 0; i < maxPredictions; i++) {
+      labelContainer.appendChild(document.createElement("div"));
+    }
 
-//     init();
+    // Start predicting loop
+    window.requestAnimationFrame(loop);
+  };
 
-//     return () => {
-//       webcam.stop();
-//     };
-//   }, []);
+  useEffect(() => {
+    // Call init function when component mounts
+    init();
 
-//   const loop = async () => {
-//     webcam.update();
-//     await predict();
-//     window.requestAnimationFrame(loop);
-//   };
+    return () => {
+      // Cleanup webcam and model resources when component unmounts
+      if (webcam) {
+        webcam.stop();
+      }
+    };
+  }, []);
 
-//   const predict = async () => {
-//     const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
-//     const prediction = await model.predict(posenetOutput);
+  const loop = async () => {
+    if (webcam) {
+      webcam.update();
+      await predict();
+      window.requestAnimationFrame(loop);
+    }
+  };
 
-//     for (let i = 0; i < maxPredictions; i++) {
-//       const classPrediction =
-//         prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-//       labelContainer.childNodes[i].innerHTML = classPrediction;
-//     }
+  const predict = async () => {
+    if (model && webcam) {
+      const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
+      const prediction = await model.predict(posenetOutput);
 
-//     drawPose(pose);
-//   };
+      for (let i = 0; i < maxPredictions; i++) {
+        const classPrediction =
+          prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+        labelContainer.childNodes[i].innerHTML = classPrediction;
+      }
 
-//   const drawPose = (pose) => {
-//     if (webcam.canvas) {
-//       ctx.drawImage(webcam.canvas, 0, 0);
-//       if (pose) {
-//         const minPartConfidence = 0.5;
-//         tmPose.drawKeypoints(pose.keypoints, minPartConfidence, ctx);
-//         tmPose.drawSkeleton(pose.keypoints, minPartConfidence, ctx);
-//       }
-//     }
-//   };
+      drawPose();
+    }
+  };
 
-//   return (
-//     <div>
-//       <div>Teachable Machine Pose Model</div>
-//       {/* <button type="button" onClick={init}>
-//         Start
-//       </button> */}
-//       <div>
-//         <canvas id="canvas" ref={canvasRef}></canvas>
-//       </div>
-//       <div id="label-container"></div>
-//     </div>
-//   );
-// };
+  const drawPose = () => {
+    if (webcam && webcam.canvas) {
+      const canvas = canvasRef.current;
+      ctx.drawImage(webcam.canvas, 0, 0);
+      // Uncomment below to draw keypoints and skeleton
+      // if (pose) {
+      //   const minPartConfidence = 0.5;
+      //   tmPose.drawKeypoints(pose.keypoints, minPartConfidence, ctx);
+      //   tmPose.drawSkeleton(pose.keypoints, minPartConfidence, ctx);
+      // }
+    }
+  };
 
-// export default TeachableMachinePose;
+  return (
+    <>
+      <div>
+        <div>Teachable Machine Pose Model</div>
+        <button type="button" onClick={init}>
+          Start
+        </button>
+        <div>
+          <canvas ref={canvasRef} id="canvas"></canvas>
+        </div>
+        <div ref={labelContainerRef} id="label-container"></div>
+      </div>
+    </>
+  );
+};
+
+export default TeachableMachinePose;
