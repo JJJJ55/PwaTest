@@ -114,7 +114,7 @@ const VideoTagCustom = () => {
         ref={videoRef}
         id="myVideo"
         src={videData}
-        width="80%"
+        width="50%"
         muted
         onEnded={handleEndVideo}
         onTimeUpdate={handleTimeUpdate}
