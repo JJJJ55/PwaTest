@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PwaTest/static/css/main.dd80af68.css",
-    "main.js": "/PwaTest/static/js/main.5ba8d2c7.js",
+    "main.js": "/PwaTest/static/js/main.76d117b5.js",
     "reactPlayerYouTube.js": "/PwaTest/static/js/reactPlayerYouTube.fd59ff5e.chunk.js",
     "reactPlayerSoundCloud.js": "/PwaTest/static/js/reactPlayerSoundCloud.29fa651e.chunk.js",
     "reactPlayerVimeo.js": "/PwaTest/static/js/reactPlayerVimeo.afa2f780.chunk.js",
@@ -22,7 +22,7 @@
     "static/media/logo.svg": "/PwaTest/static/media/logo.2d27ead7c10f774c5306bcf3c257a728.svg",
     "index.html": "/PwaTest/index.html",
     "main.dd80af68.css.map": "/PwaTest/static/css/main.dd80af68.css.map",
-    "main.5ba8d2c7.js.map": "/PwaTest/static/js/main.5ba8d2c7.js.map",
+    "main.76d117b5.js.map": "/PwaTest/static/js/main.76d117b5.js.map",
     "reactPlayerYouTube.fd59ff5e.chunk.js.map": "/PwaTest/static/js/reactPlayerYouTube.fd59ff5e.chunk.js.map",
     "reactPlayerSoundCloud.29fa651e.chunk.js.map": "/PwaTest/static/js/reactPlayerSoundCloud.29fa651e.chunk.js.map",
     "reactPlayerVimeo.afa2f780.chunk.js.map": "/PwaTest/static/js/reactPlayerVimeo.afa2f780.chunk.js.map",
@@ -41,6 +41,6 @@
   },
   "entrypoints": [
     "static/css/main.dd80af68.css",
-    "static/js/main.5ba8d2c7.js"
+    "static/js/main.76d117b5.js"
   ]
 }
