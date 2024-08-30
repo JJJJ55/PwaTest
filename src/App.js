@@ -13,7 +13,7 @@ function App() {
   requestPermission();
   return (
     <div className="App">
-      카메라, 푸쉬알림, 이미지 메타정보 테스트
+      카메라, 푸쉬알림, 터치 이벤트, 이미지 메타정보 테스트
       {/* <CameraComponent /> */}
       {/* <CameraApp /> */}
       <ImageMeta />
