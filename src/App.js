@@ -7,6 +7,7 @@ import { requestPermission } from "./firebaseCloudMessaging";
 import ImageMeta from "./TestComponents/ImageMeta";
 import Video from "./TestComponents/Video";
 import VideoTag from "./TestComponents/VideoTag";
+import VideoTagCustom from "./TestComponents/VideoTagCustom";
 
 function App() {
   requestPermission();
@@ -20,6 +21,9 @@ function App() {
       <Video />
       일반 비디오 태그 동영상 <br />
       <VideoTag />
+      <br />
+      일반 비디오 태그 커스텀 동영상 <br />
+      <VideoTagCustom />
     </div>
   );
 }
