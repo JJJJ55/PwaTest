@@ -6,6 +6,7 @@ import CameraApp from "./TestComponents/CameraApp";
 import { requestPermission } from "./firebaseCloudMessaging";
 import ImageMeta from "./TestComponents/ImageMeta";
 import Video from "./TestComponents/Video";
+import VideoTag from "./TestComponents/VideoTag";
 
 function App() {
   requestPermission();
@@ -15,7 +16,10 @@ function App() {
       {/* <CameraComponent /> */}
       {/* <CameraApp /> */}
       <ImageMeta />
+      리액트 플레이어 동영상
       <Video />
+      일반 비디오 태그 동영상 <br />
+      <VideoTag />
     </div>
   );
 }
