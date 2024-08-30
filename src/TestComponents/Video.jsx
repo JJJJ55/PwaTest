@@ -15,7 +15,7 @@ const PlayerWrapper = styled.div`
 
 const Video = () => {
   const handleEndVideo = () => {
-    // alert("제셍 끝");
+    // alert("재생 끝");
   };
   return (
     <PlayerWrapper>
