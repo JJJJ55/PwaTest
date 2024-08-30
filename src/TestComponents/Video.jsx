@@ -11,29 +11,24 @@ const PlayerWrapper = styled.div`
   .react-player__control {
     pointer-events: none; /* 클릭 비활성화 */
   }
-
-  .overlay {
-    position: absolute;
-    bottom: 20px;
-    left: 25%;
-    width: 50%;
-    height: 2%;
-    background: transparent; /* 오버레이를 투명하게 설정 */
-    z-index: 1; /* 비디오 위에 오버레이를 표시 */
-  }
 `;
 
-const Video = () => (
-  <PlayerWrapper>
-    <ReactPlayer
-      url={videData}
-      controls={true}
-      width="50%"
-      height="50%"
-      style={{ margin: "0 auto" }}
-    />
-    <div className="overlay" />
-  </PlayerWrapper>
-);
+const Video = () => {
+  const handleEndVideo = () => {
+    // alert("제셍 끝");
+  };
+  return (
+    <PlayerWrapper>
+      <ReactPlayer
+        url={videData}
+        controls={true}
+        width="50%"
+        height="50%"
+        style={{ margin: "0 auto" }}
+        onEnded={handleEndVideo}
+      />
+    </PlayerWrapper>
+  );
+};
 
 export default Video;

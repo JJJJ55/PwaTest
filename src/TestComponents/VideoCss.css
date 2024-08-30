@@ -2,3 +2,21 @@
 .my-player .react-player__control {
   pointer-events: none; /* 사용자 클릭을 막습니다 */
 }
+
+/* .player {
+  pointer-events: none;
+} */
+#myVideo::-webkit-media-controls {
+  /* display: none !important; */
+}
+
+/* #myVideo::-webkit-media-controls-play-button,
+#myVideo::-webkit-media-controls-volume-slider,
+#myVideo::-webkit-media-controls-current-time-display,
+#myVideo::-webkit-media-controls-duration-display {
+  display: none !important;
+} */
+
+#myVideo::-webkit-media-controls-timeline {
+  pointer-events: none;
+}
