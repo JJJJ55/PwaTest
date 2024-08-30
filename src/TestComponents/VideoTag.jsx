@@ -43,7 +43,7 @@ const VideoTag = () => {
       ref={videoRef}
       // className="player"
       src={videData}
-      width={"50%"}
+      width={"80%"}
       controls
       muted
       onEnded={handleEndVideo}

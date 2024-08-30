@@ -16,12 +16,12 @@ function App() {
       카메라, 푸쉬알림, 터치 이벤트, 이미지 메타정보 테스트
       {/* <CameraComponent /> */}
       {/* <CameraApp /> */}
-      <ImageMeta />
+      {/* <ImageMeta />
       리액트 플레이어 동영상
       <Video />
       일반 비디오 태그 동영상 <br />
       <VideoTag />
-      <br />
+      <br /> */}
       일반 비디오 태그 커스텀 동영상 <br />
       <VideoTagCustom />
     </div>

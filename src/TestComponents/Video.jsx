@@ -22,8 +22,8 @@ const Video = () => {
       <ReactPlayer
         url={videData}
         controls={true}
-        width="50%"
-        height="50%"
+        width="80%"
+        height="80%"
         style={{ margin: "0 auto" }}
         onEnded={handleEndVideo}
       />
