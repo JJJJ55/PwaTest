@@ -9,7 +9,7 @@ const PlayerWrapper = styled.div`
   height: 100%;
 
   .react-player__control {
-    pointer-events: none; /* 클릭 비활성화 */
+    pointer-events: none; /* 클릭 비활성화 효과 */
   }
 `;
 
