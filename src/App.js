@@ -8,6 +8,7 @@ import ImageMeta from "./TestComponents/ImageMeta";
 import Video from "./TestComponents/Video";
 import VideoTag from "./TestComponents/VideoTag";
 import VideoTagCustom from "./TestComponents/VideoTagCustom";
+import Map from "./TestComponents/Map";
 
 function App() {
   requestPermission();
@@ -24,6 +25,7 @@ function App() {
       <br /> */}
       일반 비디오 태그 커스텀 동영상 <br />
       <VideoTagCustom />
+      <Map />
     </div>
   );
 }
