@@ -15,6 +15,8 @@ import ImageTest from "./page/ImageTest";
 import VideoTest from "./page/VideoTest";
 import MapTest from "./page/MapTest";
 import Home from "./page/Home";
+import Daejeon from "./TestComponents/KoreaMap/SigunMap/Daejeon";
+import AllMap from "./TestComponents/KoreaMap/AllMap";
 
 const s = {
   Frame: styled.div`
@@ -32,7 +34,10 @@ function App() {
           <Route path="/cam" element={<CameraTest />} />
           <Route path="/image" element={<ImageTest />} />
           <Route path="/video" element={<VideoTest />} />
-          <Route path="/map" element={<MapTest />} />
+          <Route path="/map" element={<MapTest />}>
+            <Route index element={<AllMap />} />
+            <Route path="daejeon" element={<Daejeon />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </s.Frame>
