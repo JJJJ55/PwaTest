@@ -169,7 +169,10 @@ const Map = () => {
   }, []);
   return (
     <s.Frame>
-      <div id="map" style={{ width: "500px", height: "500px" }}></div>
+      <div
+        id="map"
+        style={{ width: "80%", height: "100vh", margin: "0 auto" }}
+      ></div>
     </s.Frame>
   );
 };
