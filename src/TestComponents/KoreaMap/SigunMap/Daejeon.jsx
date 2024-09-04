@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import "../css/Sigun.css";
+import "../css/Map.css";
 
 const s = {
   Frame: styled.div`
@@ -10,14 +10,17 @@ const s = {
     border: 1px solid red;
   `,
   Tooltip: styled.div`
-    width: 70px;
-    text-align: center;
-    margin: 0 auto;
+    width: 120px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto 0;
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    pointer-events: none;
+    font-weight: bold;
   `,
 };
 
@@ -32,11 +35,12 @@ const Daejeon = () => {
   };
 
   const handleMouseLeave = () => {
-    setTooltip({ ...tooltip, visible: false });
+    setTooltip({ text: "" });
   };
   return (
     <s.Frame>
       <svg
+        id="sigun"
         xmlns="http://www.w3.org/2000/svg"
         version="1.2"
         baseProfile="tiny"

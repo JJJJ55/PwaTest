@@ -12,6 +12,9 @@ const s = {
     width: fit-content;
     border: 3px solid blue;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-items: center;
   `,
 };
 
@@ -22,6 +25,7 @@ const MapTest = () => {
       <s.MapArea>
         <Outlet />
       </s.MapArea>
+      <input type="text" />
     </s.Frame>
   );
 };
