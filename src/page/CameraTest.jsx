@@ -12,7 +12,7 @@ const s = {
 const CameraTest = () => {
   return (
     <s.Frame>
-      카메라, 푸쉬알림, 터치 이벤트, 사진 메타정보 테스트
+      카메라, 푸쉬알림, 터치 이벤트, 이미지 메타정보 테스트
       <CameraComponent />
       <CameraApp />
     </s.Frame>
