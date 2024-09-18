@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <s.Frame>
-      <s.Title>PWA 및 특화 프로젝트 테스트 페이지</s.Title>
+      <s.Title>PWA 및 프로젝트 테스트 페이지</s.Title>
       <s.BtnArea>
         <s.Btn onClick={() => handleMovePage("/cam")}>카메라</s.Btn>
         <s.Btn onClick={() => handleMovePage("/image")}>이미지</s.Btn>
