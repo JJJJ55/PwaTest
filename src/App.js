@@ -46,7 +46,7 @@ function App() {
     <s.Frame>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/PwaTest" element={<Home />} />
           <Route path="/cam" element={<CameraTest />} />
           <Route path="/image" element={<ImageTest />} />
           <Route path="/video" element={<VideoTest />} />
