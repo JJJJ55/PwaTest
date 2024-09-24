@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/PwaTest/static/css/main.41dcbe0f.css",
-    "main.js": "/PwaTest/static/js/main.d811b808.js",
+    "main.js": "/PwaTest/static/js/main.5026539e.js",
     "static/js/453.ef5db0c4.chunk.js": "/PwaTest/static/js/453.ef5db0c4.chunk.js",
     "static/media/메인영상.mp4": "/PwaTest/static/media/메인영상.cf77794051ffc02c4400.mp4",
     "service-worker.js": "/PwaTest/service-worker.js",
-    "static/media/logo.svg": "/PwaTest/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
+    "static/media/logo.svg": "/PwaTest/static/media/logo.2d27ead7c10f774c5306bcf3c257a728.svg",
     "index.html": "/PwaTest/index.html",
     "main.41dcbe0f.css.map": "/PwaTest/static/css/main.41dcbe0f.css.map",
-    "main.d811b808.js.map": "/PwaTest/static/js/main.d811b808.js.map",
+    "main.5026539e.js.map": "/PwaTest/static/js/main.5026539e.js.map",
     "453.ef5db0c4.chunk.js.map": "/PwaTest/static/js/453.ef5db0c4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.41dcbe0f.css",
-    "static/js/main.d811b808.js"
+    "static/js/main.5026539e.js"
   ]
 }
