@@ -33,6 +33,7 @@ import Jeonnam from "./TestComponents/KoreaMap/SigunMap/Jeonnam";
 import Gangwon from "./TestComponents/KoreaMap/SigunMap/Gangwon";
 import Gyeongbuk from "./TestComponents/KoreaMap/SigunMap/Gyeongbuk";
 import Gyeongnam from "./TestComponents/KoreaMap/SigunMap/Gyeongnam";
+import MoneyPage from "./page/MoneyPage";
 
 const s = {
   Frame: styled.div`
@@ -47,6 +48,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/PwaTest" element={<Home />} />
+          <Route path="/money" element={<MoneyPage />} />
           <Route path="/cam" element={<CameraTest />} />
           <Route path="/image" element={<ImageTest />} />
           <Route path="/video" element={<VideoTest />} />

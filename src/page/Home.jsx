@@ -41,6 +41,7 @@ const Home = () => {
         <s.Btn onClick={() => handleMovePage("/image")}>이미지</s.Btn>
         <s.Btn onClick={() => handleMovePage("/video")}>비디오</s.Btn>
         <s.Btn onClick={() => handleMovePage("/map")}>지도</s.Btn>
+        <s.Btn onClick={() => handleMovePage("/money")}>결제</s.Btn>
       </s.BtnArea>
     </s.Frame>
   );
