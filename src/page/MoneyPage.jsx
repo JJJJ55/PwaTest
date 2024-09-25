@@ -12,7 +12,7 @@ const MoneyPage = () => {
   function onClickPayment() {
     /* 1. 가맹점 식별하기 */
     const { IMP } = window;
-    IMP.init("imp45341687");
+    IMP.init("imp45341687"); //실제 내꺼
 
     /* 2. 결제 데이터 정의하기 */
     const data = {
