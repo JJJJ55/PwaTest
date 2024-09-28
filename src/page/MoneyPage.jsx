@@ -20,7 +20,7 @@ const MoneyPage = () => {
       pay_method: "card", // 결제수단
       merchant_uid: `mid_${new Date().getTime()}`, // 주문번호
       amount: 1000, // 결제금액
-      name: "킥보드 범칙금", // 주문명
+      name: "킥보드 범칙금", // 상품명
       buyer_name: "홍길동", // 구매자 이름
     };
 
