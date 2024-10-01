@@ -9,7 +9,8 @@ const s = {
 };
 
 const MoneyPage = () => {
-  function onClickPayment() {
+  const user = "오진영";
+  const onClickPayment = () => {
     /* 1. 가맹점 식별하기 */
     const { IMP } = window;
     IMP.init("imp45341687"); //실제 내꺼
@@ -19,17 +20,17 @@ const MoneyPage = () => {
       pg: "nice", // PG사
       pay_method: "card", // 결제수단
       merchant_uid: `mid_${new Date().getTime()}`, // 주문번호
-      amount: 1000, // 결제금액
+      amount: 100, // 결제금액
       name: "킥보드 범칙금", // 상품명
-      buyer_name: "홍길동", // 구매자 이름
+      buyer_name: user, // 구매자 이름
     };
 
     /* 4. 결제 창 호출하기 */
     IMP.request_pay(data, callback);
-  }
+  };
 
   /* 3. 콜백 함수 정의하기 */
-  function callback(response) {
+  const callback = (response) => {
     const { success, merchant_uid, error_msg } = response;
 
     if (success) {
@@ -37,7 +38,7 @@ const MoneyPage = () => {
     } else {
       alert(`결제 실패: ${error_msg}`);
     }
-  }
+  };
   return (
     <s.Frame>
       <button onClick={onClickPayment}>결제하기</button>
