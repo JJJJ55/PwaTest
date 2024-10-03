@@ -18,7 +18,7 @@ const MoneyPage = () => {
     /* 2. 결제 데이터 정의하기 */
     const data = {
       pg: "nice", // PG사
-      pay_method: "card", // 결제수단
+      pay_method: "card", // 수단
       merchant_uid: `mid_${new Date().getTime()}`, // 주문번호
       amount: 100, // 결제금액
       name: "킥보드 범칙금", // 상품명
