@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+// import { messaging, onMessage } from "./firebase-config";
+import { getMessaging, getToken, onMessage } from "firebase/messaging";
+import { firebaseConfig } from "../firebaseCloudMessaging";
+import { initializeApp } from "firebase/app";
 
 const s = {
   Frame: styled.div`
@@ -43,6 +47,26 @@ const Home = () => {
         <s.Btn onClick={() => handleMovePage("/map")}>지도</s.Btn>
         <s.Btn onClick={() => handleMovePage("/money")}>결제</s.Btn>
       </s.BtnArea>
+      {/* 알림 아이콘 */}
+      <span style={{ position: "relative" }}>
+        <i className="notification-icon">🔔</i>
+        {/* {notificationCount > 0 && (
+          <span
+            style={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              backgroundColor: "red",
+              borderRadius: "50%",
+              color: "white",
+              padding: "2px 5px",
+              fontSize: "12px",
+            }}
+          >
+            {notificationCount}
+          </span>
+        )} */}
+      </span>
     </s.Frame>
   );
 };

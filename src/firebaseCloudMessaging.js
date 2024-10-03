@@ -7,7 +7,7 @@ import { getMessaging, getToken, onMessage } from "firebase/messaging";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: process.env.REACT_APP_FCM_APIKEY,
   authDomain: process.env.REACT_APP_FCM_AUTH_DOMAIN,
   projectId: process.env.REACT_APP_FCM_PROJECT_ID,
