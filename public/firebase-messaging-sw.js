@@ -4,7 +4,7 @@ self.addEventListener("activate", function (e) {
 
 self.addEventListener("push", function (e) {
   localStorage.setItem("test", "sd");
-  console.log("push: ", e.data.json());
+  console.log("pushed: ", e.data.json());
   if (!e.data.json()) return;
 
   const notification = e.data.json().notification;
