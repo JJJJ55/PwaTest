@@ -11,7 +11,7 @@ const s = {
 const MoneyPage = () => {
   const user = "오진영";
   const onClickPayment = () => {
-    /* 1. 가맹점 식별하기 */
+    /* 1. 가맹점 식별 */
     const { IMP } = window;
     IMP.init("imp45341687"); //실제 내꺼
 
