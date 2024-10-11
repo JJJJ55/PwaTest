@@ -13,7 +13,7 @@ const ImageTest = () => {
   const [isFlag, setIsFlag] = useState(false);
   useEffect(() => {
     if (isFlag && audioRef.current) {
-      audioRef.current.play(); // Play the audio when status is 200
+      audioRef.current.play();
       audioRef.current.loop = true;
     } else if (!isFlag) {
       audioRef.current.pause();
